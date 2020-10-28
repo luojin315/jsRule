@@ -8,7 +8,8 @@
 			*{margin: 0px;padding: 0px;box-sizing: border-box;font-family: "微软雅黑";}
 			.tlitle{text-align: center;margin-top: 50px;}
 			.center{width: 1200px;border: saddlebrown 1px solid;height: auto;margin: 0 auto;margin-top: 50px;padding: 15px;}
-			.center>section:nth-of-type(1){height:40px;}
+			.center>section:nth-of-type(1),
+			.center>section:nth-of-type(2){height:40px;}
 			.center>section{height:auto;min-height: 40px;transition: .3s;overflow: hidden;}
 			.center>section h2{font-size:22px;margin-bottom: 10px;cursor: pointer;}
 			.center>section pre{min-height: 40px;line-height: 40px;font-size: 16px;margin-bottom: 10px;}
@@ -150,6 +151,25 @@ inject 注入    /       extract 提取
 						function f () {
 							
 						}
+					</code>
+				</pre>
+			</section>
+			<section>
+				<h2>三、引入文件规范</h2>
+				<ul>
+					<li class="bold">style文件在head标签中引入</li>
+					<li class="bold">js文件在body尾部引入</li>
+				</ul>
+				<pre>
+					<code class="JavaScript">
+						god：
+						function f () {
+							
+						}
+						bad:
+						 var f = function () {
+							 
+						 }
 					</code>
 				</pre>
 			</section>
