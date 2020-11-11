@@ -8,4 +8,3 @@
 [虎课网，包含很多零基础教学视频](https://huke88.com/)
 
 [vuecli4全面配置](https://github.com/staven630/vue-cli4-config#base)
-[vuecli4全面配置](https://github.com/staven630/vue-cli4-config#base)
