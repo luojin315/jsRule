@@ -16,3 +16,7 @@
   background-size: 3px 18px;
   background-repeat: y-repeat
 ```
+- 文字两端对齐(固定宽度)移动端可能会有问题再更
+``` javascript
+  text-align: justify;
+```
