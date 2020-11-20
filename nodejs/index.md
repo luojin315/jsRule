@@ -93,3 +93,21 @@ console.time("s");
 result = glob.sync(__dirname + '/**/*')
 console.timeEnd("s")
 ```
+## express设置接口跨域
+``` javascript
+app.all("*", function (req, res, next) {
+	//设置允许跨域的域名，*代表允许任意域名跨域
+	res.header("Access-Control-Allow-Origin", req.headers.origin || '*');
+	// //允许的header类型
+	res.header("Access-Control-Allow-Headers", "Content-Type, Authorization, X-Requested-With");
+	// //跨域允许的请求方式 
+	res.header("Access-Control-Allow-Methods", "PUT,POST,GET,DELETE,OPTIONS");
+	// 可以带cookies
+	res.header("Access-Control-Allow-Credentials", true);
+	if (req.method == 'OPTIONS') {
+		res.sendStatus(200);
+	} else {
+		next();
+	}
+})
+```
