@@ -2,34 +2,34 @@
 ``` javascript
 <!-- 引入 -->
 module.exports = function (user) {
-    var random = Math.random() * 3;
+		var random = Math.random() * 3;
 
-    var computerActive = "";
+		var computerActive = "";
 
-    if (random < 1) {
-        computerActive = "rock"
-    } else if (random > 2) {
-        computerActive = "cloth"
-    } else {
-        computerActive = "scissor"
-    }
+		if (random < 1) {
+			computerActive = "rock"
+		} else if (random > 2) {
+			computerActive = "cloth"
+		} else {
+			computerActive = "scissor"
+		}
 
-    console.log(computerActive);
+		console.log(computerActive);
 
-    if (user == computerActive) {
-        console.log("平局");
-        return 0;
-    } else if (
-        (computerActive == "rock" && user == "cloth") ||
-        (computerActive == "cloth" && user == "scissor") ||
-        (computerActive == "scissor" && user == "rock")
-    ) {
-        console.log("玩家赢");
-        return -1;
-    } else {
-        console.log("电脑赢");
-        return +1;
-    }
+		if (user == computerActive) {
+			console.log("平局");
+			return 0;
+		} else if (
+			(computerActive == "rock" && user == "cloth") ||
+			(computerActive == "cloth" && user == "scissor") ||
+			(computerActive == "scissor" && user == "rock")
+		) {
+			console.log("玩家赢");
+			return -1;
+		} else {
+			console.log("电脑赢");
+			return +1;
+		}
 }
 
 <!-- main.js -->
