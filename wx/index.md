@@ -20,3 +20,7 @@
 ``` javascript
   text-align: justify;
 ```
+- 设置不可点击
+``` javascript
+pointer-events: none;
+```
