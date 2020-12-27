@@ -1,0 +1,82 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+body{
+	background-color: #fff;
+	padding: 30px 0px;
+}
+h3{
+	margin-bottom: 20px;
+	padding-left: 20px;
+}
+/* 鼠标按下动画 */
+a:active{
+	transform: scale(0.9);
+	transition: .3s;
+}
+
+
+/*********** 动画一 ***********/
+.animation1{
+	display: flex;
+	justify-content: center;
+}
+.animation1 a{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 50px;
+	height: 50px;
+	font-size: 20px;
+	border-radius: 16px;
+	border: 0;
+	margin: 0 10px 0 10px;
+	background-color: #fff;
+	box-shadow: 0px 0px 12px #636262;
+	position: relative;
+	overflow: hidden;
+	cursor: pointer;
+}
+.animation1 a i{
+	transform: scale(0.9);
+	transition: .3s;
+}
+.animation1 a::before{
+	content: "";
+	display: block;
+	position: absolute;
+	top: 90%;
+	left: -110%;
+	width: 130%;
+	height: 130%;
+	transform: rotate(45deg);
+	transition: all 0.4s cubic-bezier(.32,0,.43,1.59);
+}
+.animation1 a:nth-of-type(1){
+	color: #fe9847;
+}
+.animation1 a:nth-of-type(2){
+	color: #82d841;
+}
+.animation1 a:nth-of-type(3){
+	color: #3598fe;
+}
+
+.animation1 a:nth-of-type(1)::before{
+	background-color: #FE9847;
+}
+.animation1 a:nth-of-type(2)::before{
+	background-color: #82d841;
+}
+.animation1 a:nth-of-type(3)::before{
+	background-color: #3598fe;
+}
+.animation1 a:hover::before{
+	top: -10%;
+	left: -10%;
+}
+.animation1 a:hover i{
+	color: white;
+	transform: scale(1);
+}

@@ -21,8 +21,11 @@
 
 [小程序底层框架讲解](https://godbasin.github.io/2018/09/02/wxapp-technology-architecture/)
 
+[微信小程序渲染性能优化](https://www.sohu.com/a/322762683_463970)
+
 ## 被删前端博客
 [有很多干货](https://github.com/godbasin/godbasin.github.io)
 
 ## 迷茫宝典
 [一些知识的汇总](https://github.com/sl1673495/frontend-advantage-roadmap)
+
