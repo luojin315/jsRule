@@ -10,6 +10,12 @@ h3{
 	margin-bottom: 20px;
 	padding-left: 20px;
 }
+a{
+	text-decoration: none;
+	color: #333;
+}
+
+
 /* 鼠标按下动画 */
 a:active{
 	transform: scale(0.9);
@@ -77,6 +83,57 @@ a:active{
 	left: -10%;
 }
 .animation1 a:hover i{
+	/* 需要注意的是 如不更改字体颜色则会被伪元素覆盖，需要重新给字体添加颜色重新渲染 */
 	color: white;
 	transform: scale(1);
+}
+
+/* 动画二 */
+.animation2{
+	height: 80px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: #444;
+}
+.animation2 a{
+	color: white;
+	display: block;
+	padding: 10px 15px;
+	position: relative;
+	background-color: transparent;
+	box-sizing: border-box;
+	overflow: hidden;
+}
+.animation2 a::before,
+.animation2 a::after{
+	content: "";
+	display: block;
+	position: absolute;
+	width: 15px;
+	height: 15px;
+	border: 1px solid deepskyblue;
+	transition: .3s ease-out;
+}
+.animation2 a::before{
+	left: 0px;
+	top: 0px;
+	border-bottom: 0;
+	border-right: 0;
+}
+.animation2 a::after{
+	right: 0px;
+	bottom: 0px;
+	border-top: 0;
+	border-left: 0;
+}
+.animation2 a:hover::after,
+.animation2 a:hover::before{
+	width: 100%;
+	height: 100%;
+}
+.animation2 a:hover.light{
+	background-color: deepskyblue;
+	box-shadow: 0px 0px 20px deepskyblue;
+	transition: .6s ease-in-out;
 }
